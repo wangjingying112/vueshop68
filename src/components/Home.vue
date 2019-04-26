@@ -18,6 +18,7 @@
           :unique-opened="true"
           :collapse="isshow"
           :collapse-transition="false"
+          :router="true"     
         >
           <el-submenu
             :index="item.id+''"
@@ -30,7 +31,7 @@
               <span>{{item.authName}}</span>
             </template>
             <el-menu-item
-              :index="item.id+'-'+item2.id"
+              :index="item2.path" 
               v-for="item2 in item.children"
               :key="item2.id"
             >
